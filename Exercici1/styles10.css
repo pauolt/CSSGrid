@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif; /* Defineix la font principal per al text del document. */
+    margin: 0; /* Elimina els marges per defecte del navegador. */
+    padding: 0; /* Elimina el padding per defecte del navegador. */
+}
+
+.container {
+    display: grid; /* Activa el comportament de graella per al contenidor principal. */
+    grid-template-columns: 1fr 3fr; /* Defineix dues columnes:
+                                        - La primera ocupa 1 fracció de l'espai.
+                                        - La segona ocupa 3 fraccions de l'espai. */
+    grid-template-rows: auto 1fr auto; /* Defineix tres files:
+                                           - La primera i la tercera tenen altura automàtica.
+                                           - La segona ocupa tot l'espai restant. */
+    grid-template-areas: /* Assigna noms semàntics a les àrees de la graella. */
+            "header header" /* La capçalera ocupa les dues columnes a la fila 1. */
+        "main aside"    /* El contingut principal ocupa la columna 1 i l'aside la columna 2 a la fila 2. */
+        "footer footer"; /* El peu de pàgina ocupa les dues columnes a la fila 3. */
+    min-height: 100vh; /* Estableix una altura mínima del contenidor igual a l'altura del viewport. */
+}
+
+header {
+    grid-area: header; /* Assigna la capçalera a l'àrea "header" de la graella. */
+    background-color: #3498db; /* Defineix un color de fons blau per a la capçalera. */
+    color: #fff; /* Defineix el color del text com a blanc per a contrastar amb el fons. */
+    padding: 20px; /* Afegeix espai intern dins de la capçalera. */
+}
+
+nav {
+    margin-top: 10px; /* Afegeix un espai superior al menú de navegació. */
+}
+
+nav ul {
+    list-style: none; /* Elimina els punts de les llistes. */
+    padding: 0; /* Elimina el padding per defecte de la llista. */
+    display: flex; /* Mostra els elements de la llista en línia horitzontalment. */
+}
+
+nav li {
+    margin-right: 20px; /* Afegeix un espai entre els elements de la llista. */
+}
+
+nav a {
+    text-decoration: none; /* Elimina el subratllat dels enllaços. */
+    color: #fff; /* Defineix el color dels enllaços com a blanc. */
+}
+
+main {
+    grid-area: main; /* Assigna el contingut principal a l'àrea "main" de la graella. */
+    display: grid; /* Defineix una graella per al contingut principal. */
+    grid-template-columns: 1fr 2fr; /* Crea dues columnes:
+                                        - La primera ocupa 1 fracció de l'espai.
+                                        - La segona ocupa 2 fraccions de l'espai. */
+    grid-gap: 20px; /* Defineix un espai de 20 píxels entre els elements de la graella. */
+    padding: 20px; /* Afegeix espai intern al voltant del contingut principal. */
+}
+
+.featured, .content {
+    display: grid; /* Defineix una graella per a les seccions. */
+    grid-gap: 10px; /* Defineix un espai de 10 píxels entre els elements de cada secció. */
+}
+
+
+article {
+    padding: 20px; /* Afegeix espai intern dins de cada article. */
+    background-color: #ecf0f1; /* Defineix un color de fons gris clar per als articles. */
+}
+
+aside {
+    grid-area: aside; /* Assigna l'aside a l'àrea "aside" de la graella. */
+    background-color: #2ecc71; /* Defineix un color de fons verd per a l'aside. */
+    color: #fff; /* Defineix el color del text com a blanc. */
+    padding: 20px; /* Afegeix espai intern dins de l'aside. */
+}
+
+footer {
+    grid-area: footer; /* Assigna el peu de pàgina a l'àrea "footer" de la graella. */
+    background-color: #34495e; /* Defineix un color de fons gris fosc per al peu de pàgina. */
+    color: #fff; /* Defineix el color del text com a blanc. */
+    text-align: center; /* Centra el text dins del peu de pàgina. */
+    padding: 10px; /* Afegeix espai intern dins del peu de pàgina. */
+}
