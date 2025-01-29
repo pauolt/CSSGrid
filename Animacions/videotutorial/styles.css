@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans&display=swap');
 
 /* Reset */
 * {
@@ -10,7 +10,7 @@
 /* Main Styling */
 html,
 body {
-    font-family: 'Titillium Web', sans-serif;
+    font-family: "Smooch Sans", sans-serif;
     background: #25282f;
 }
 
@@ -127,13 +127,24 @@ p {
 @keyframes changecolor {
     from {
         background-color: white;
+        transform: translateY(0);
     }
     to {
         background-color: green;
+        transform: translateY(-5%);
     }
 }
 
-/* Mobile */
+@font-face {
+    font-family: 'Smooch Sans';
+    src: url('https://fonts.googleapis.com/css2?family=Smooch+Sans&display=swap');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
 @media (max-width: 768px) {
     #bauhaus {
         grid-template-columns: 1fr;
